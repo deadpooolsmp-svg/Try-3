@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" 
+
+content="width=device-width, 
+
+initial-scale=1.0">
+
+<title>For Bhumi ✨</title>
+
+<link 
+
+href="https://fonts.googleapis.co
+
+m/css2?
+
+family=Poppins:wght@300;400;60
+
+0&family=Dancing
+
++Script:wght@700&display=swap" 
+
+rel="stylesheet">
+
+<style>
+
+#curtain-container{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    pointer-events:none;
+    visibility:hidden;
+}
+
+#left-curtain,
+#right-curtain{
+    position:absolute;
+    top:0;
+    width:50%;
+    height:100%;
+    background:linear-gradient(
+    to right,
+    #6d0019,
+    #8b0000,
+    #b22222
+    );
+    box-shadow:0 0 50px rgba
+
+(0,0,0,.5);
+}
+
+#left-curtain{
+    left:0;
+}
+
+#right-curtain{
+    right:0;
+}
+
+.open-left{
+    animation:openLeft 2.5s ease 
+
+forwards;
+}
+
+.open-right{
+    animation:openRight 2.5s ease 
+
+forwards;
+}
+
+@keyframes openLeft{
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+@keyframes openRight{
+    to{
+        transform:translateX(100%);
+    }
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:#090b1a;
+color:white;
+height:100vh;
+}
+
+.screen{
+position:absolute;
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+transition:1s;
+}
+
+.hidden{
+opacity:0;
+pointer-events:none;
+transform:scale(1.05);
+}
+
+.bg{
+position:absolute;
+inset:0;
+z-index:-2;
+overflow:hidden;
+}
+
+.gradient{
+position:absolute;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#312e81,
+#c471ed,
+#ee9ca7
+);
+background-size:400% 400%;
+animation:gradientMove 15s ease 
+
+infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 
+
+50%;}
+100%{background-position:0% 
+
+50%;}
+}
+
+.star{
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:.8;
+animation:twinkle 3s infinite 
+
+alternate;
+}
+
+@keyframes twinkle{
+from{opacity:.2;}
+to{opacity:1;}
+}
+
+.glass{
+background:rgba
+
+(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba
+
+(255,255,255,.1);
+padding:35px;
+border-radius:30px;
+box-shadow:0 0 25px rgba
+
+(255,255,255,.1);
+}
+
+.date{
+letter-spacing:4px;
+font-size:1rem;
+margin-bottom:15px;
+}
+
+.main-title{
+font-size:3rem;
+font-weight:700;
+}
+
+.name{
+font-family:'Dancing 
+
+Script',cursive;
+font-size:4rem;
+margin-top:15px;
+color:#ffd6f5;
+}
+
+.subtitle{
+margin-top:15px;
+opacity:.9;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+background:white;
+color:#111;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.photo{
+width:300px;
+height:420px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 0 30px rgba
+
+(255,255,255,.2);
+animation:zoom 10s infinite 
+
+alternate;
+}
+
+@keyframes zoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.08);
+}
+}
+
+.story{
+max-width:700px;
+margin-top:25px;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.floating{
+position:absolute;
+font-size:24px;
+animation:float 12s linear 
+
+infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(110vh);
+}
+100%{
+transform:translateY(-120px);
+}
+}
+
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+z-index:999;
+padding:12px 18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="music" autoplay loop controls>
+    <source src="https://gaana.com/song/her-642" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" 
+
+onclick="toggleMusic()">
+🎵 Music
+</button>
+
+<div class="bg">
+<div class="gradient"></div>
+</div>
+
+<!-- SCREEN 1 -->
+
+<section class="screen" id="s1">
+
+<div class="glass">
+
+<div class="date">
+05 JUNE 2026
+</div>
+
+<div class="main-title">
+A Special Day
+</div>
+
+<div class="subtitle">
+For
+</div>
+
+<div class="name">
+Bhumi ✨
+</div>
+
+<div class="subtitle">
+A little journey made just for you 
+
+🌙
+</div>
+
+<button class="btn" 
+
+onclick="next(1)">
+Begin Journey
+</button>
+
+</div>
+
+</section>
+
+<!-- SCREEN 2 -->
+
+<section class="screen hidden" 
+
+id="s2">
+
+<img 
+
+src="https://i.ibb.co/KjPZJjQP/Ch
+
+at-GPT-Image-Jun-4-2026-08-51-20
+
+-PM.png" alt="Chat GPT Image Jun 
+
+4 2026 08 51 20 PM" border="0" 
+
+width="200">
+<div class="story">
+
+Ganpati Bappa tujhya var nehmich 
+
+krupa thevo, tujhya ayushyatli 
+
+sagli obstacles dur karo, ani tula 
+
+khup health, happiness, success 
+
+ani prosperity devo. 🙏✨
+</div>
+
+<button class="btn" 
+
+onclick="next(2)">
+Next ✨
+</button>
+
+</section>
+
+<!-- SCREEN 3 -->
+
+<section class="screen hidden" 
+
+id="s3">
+
+<img 
+
+src="https://i.ibb.co/MDjvgz81/G
+
+emini-Generated-Image-1.png" 
+
+alt="Gemini Generated Image (1)" 
+
+border="0" height="400" 
+
+width="200">
+
+<div class="story">
+Like moonlight on a quiet night,
+your presence has a way of making
+ordinary moments feel special.
+</div>
+
+<button class="btn" 
+
+onclick="next(3)">
+Continue 🌸
+</button>
+
+</section>
+<!-- SCREEN 4 -->
+
+<section class="screen hidden" 
+
+id="s4">
+
+<img 
+
+src="https://i.ibb.co/dJjw7hs9/Ge
+
+mini-Generated-Image-
+
+t32e8rt32e8rt32e.png" 
+
+alt="Gemini Generated Image 
+
+t32e8rt32e8rt32e" border="0"
+width="200">
+
+<div class="story">
+Some people are remembered 
+
+because of what they do.
+
+Some are remembered because of 
+
+how they make others feel.
+
+You are one of those rare people.
+</div>
+
+<button class="btn" 
+
+onclick="next(4)">
+Continue 🦋
+</button>
+
+</section>
+
+<!-- SCREEN 5 -->
+
+<section class="screen hidden" 
+
+id="s5">
+
+<img 
+
+src="https://i.ibb.co/v6HMdwHD/
+
+Whats-App-Image-2026-06-04-at-9
+
+-44-54-PM.jpg" alt="Whats App 
+
+Image 2026 06 04 at 9 44 54 PM" 
+
+border="0" width="200">
+
+<div class="story">
+Every chapter tells a different 
+
+story.
+
+Every smile creates a different 
+
+memory.
+
+And every year adds another 
+
+beautiful page.
+</div>
+
+<button class="btn" 
+
+onclick="next(5)">
+Next 🌙
+</button>
+
+</section>
+
+<!-- SCREEN 6 -->
+
+<section class="screen hidden" 
+
+id="s6">
+
+<img 
+
+src="https://i.ibb.co/YVn6tCs/IMG
+
+-20260604-214929-jpg.jpg" 
+
+alt="IMG 20260604 214929 jpg" 
+
+border="0"  width="200">
+
+<div class="story">
+Like cherry blossoms in spring,
+some moments are beautiful 
+
+because they are genuine.
+
+Those moments deserve to be 
+
+celebrated.
+</div>
+
+<button class="btn" 
+
+onclick="next(6)">
+Continue 🌸
+</button>
+
+</section>
+
+<!-- SCREEN 7 -->
+
+<section class="screen hidden" 
+
+id="s7">
+
+<a href="https://ibb.co/35TNYCxT"><img src="https://i.ibb.co/5X18xRQ1/file-00000000664872078007905261b569fd.png" alt="file-00000000664872078007905261b569fd" border="0" width="200"></a>
+
+<div class="story">
+Dreams grow.
+Goals change.
+Years pass.
+
+But kindness and a beautiful heart 
+
+never go out of style.
+</div>
+
+<button class="btn" 
+
+onclick="next(7)">
+Next ⭐
+</button>
+
+</section>
+
+<!-- SCREEN 8 -->
+
+<section class="screen hidden" 
+
+id="s8">
+
+<img 
+
+src="https://i.ibb.co/GvQnVK0d/C
+
+hat-GPT-Image-Jun-4-2026-09-59-
+
+46-PM.png" alt="Chat GPT Image 
+
+Jun 4 2026 09 59 46 PM" 
+
+border="0" width="200">
+
+<div class="story">
+Tonight the stars seem a little 
+
+brighter.
+
+Maybe because they know
+someone special is celebrating her 
+
+birthday.
+</div>
+
+<button class="btn" 
+
+onclick="next(8)">
+Continue ✨
+</button>
+
+</section>
+
+<!-- SCREEN 9 -->
+
+<section class="screen hidden" 
+
+id="s9">
+
+<a href="https://ibb.co/q3Pvp53J"><img src="https://i.ibb.co/gLBxJVL4/IMG-20260605-133238.jpg" alt="IMG-20260605-133238" border="0"width="200"></a>
+<div class="story">
+Before the surprise arrives...
+
+Take one more look at this 
+
+journey.
+
+Because the best part is still 
+
+ahead.
+</div>
+
+<button class="btn" 
+
+onclick="next(9)">
+Reveal 🎂
+</button>
+
+</section>
+
+<!-- SCREEN 10 -->
+
+<section class="screen hidden" 
+
+id="s10">
+
+<h1 id="countdown"
+style="
+font-size:150px;
+font-weight:bold;
+text-shadow:0 0 30px white;
+">
+3
+</h1>
+
+<div class="story">
+Preparing something special...
+</div>
+
+</section>
+
+<!-- SCREEN 11 -->
+
+<section class="screen hidden" 
+
+id="s11">
+
+<h1
+style="
+font-size:5rem;
+color:#ffd6f5;
+text-shadow:0 0 30px white;
+background:
+radial-gradient(
+circle at center,
+rgba(255,215,0,.2),
+transparent 60%
+);
+">
+ HAPPY 
+  <br>
+  BIRTHDAY 
+</h1>
+
+<h2
+style="
+font-size:4rem;
+font-family:'Dancing 
+
+Script',cursive;
+margin-top:20px;
+">
+Bhumi ✨
+</h2>
+
+<div class="story">
+
+May your days be filled with 
+
+laughter,
+
+your dreams be fulfilled,
+
+and your heart always find 
+
+reasons to smile.
+
+</div>
+
+<button class="btn" 
+
+onclick="next(11)">
+One Last Message 💌
+</button>
+
+</section>
+
+<!-- SCREEN 12 -->
+
+<section class="screen hidden" 
+
+id="s12">
+
+<div class="glass" style="max-
+
+width:850px;">
+
+<h1
+style="
+font-family:'Dancing 
+
+Script',cursive;
+margin-bottom:20px;
+">
+Dear Bhumi,
+</h1>
+
+<div
+style="
+line-height:2;
+font-size:1.15rem;
+">
+
+Happy Birthday Bhumi 🎂💜
+
+Today is a very special day 
+
+because it's the day someone truly 
+
+special was born.
+
+I don't always find the right words 
+
+to say, but I want you to know 
+
+that you mean a lot to me. Your 
+
+smile, your kindness, and the way 
+
+you are have made more of an 
+
+impact on my life than you 
+
+probably realize.
+
+On your birthday, my wish for you 
+
+is simple: may you always be 
+
+happy, may your dreams come 
+
+true, and may life give you 
+
+countless reasons to smile.
+
+And since it's your special day, I'll 
+
+be honest about one thing still like
+
+you a lot, and over time you've 
+
+become someone very important 
+
+to me.
+
+May Ganpati Bappa bless you with 
+
+happiness, success, good health, 
+
+and all the beautiful things you 
+
+deserve. 🌺🙏
+<br>
+
+Happy Birthday, Bhumi. ✨
+
+
+✨ Happy Birthday ✨
+
+</div>
+
+<br>
+
+<div style="opacity:.8;">
+— Someone who wishes you the 
+
+very best 🌙
+</div>
+
+</div>
+
+<button class="btn" 
+
+onclick="next(12)">
+Final Screen 🌌
+</button>
+
+</section>
+<!-- SCREEN 13 -->
+
+<section class="screen hidden" 
+
+id="s13">
+
+<div class="glass">
+
+<h1
+style="
+font-family:'Dancing 
+
+Script',cursive;
+font-size:5rem;
+">
+Thank You Bhumi 🌙
+</h1>
+
+<p
+style="
+margin-top:20px;
+font-size:1.2rem;
+line-height:2;
+max-width:700px;
+">
+Every birthday marks the 
+
+beginning of a new chapter.
+
+May this chapter bring you 
+
+happiness,
+peace, beautiful memories,
+new adventures and everything
+you truly deserve.
+
+Keep smiling ✨
+</p>
+
+<div
+style="
+margin-top:30px;
+font-size:1.5rem;
+">
+🌸 🦋 ✨ 🌙 🎂
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+/* ---------- STARS ---------- */
+
+for(let i=0;i<250;i++){
+
+let star=document.createElement
+
+("div");
+
+star.className="star";
+
+star.style.width=Math.random()
+
+*3+"px";
+star.style.height=star.style.width;
+
+star.style.left=Math.random()
+
+*100+"vw";
+star.style.top=Math.random()
+
+*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+/* ---------- BUTTERFLIES ---------- */
+
+for(let i=0;i<15;i++){
+
+let b=document.createElement
+
+("div");
+
+b.className="floating";
+
+b.innerHTML="🦋";
+
+b.style.left=Math.random()
+
+*100+"vw";
+
+b.style.animationDuration=
+(10+Math.random()*10)+"s";
+
+document.body.appendChild(b);
+
+}
+
+/* ---------- FLOWERS ---------- */
+
+for(let i=0;i<20;i++){
+
+let p=document.createElement
+
+("div");
+
+p.className="floating";
+
+p.innerHTML="🌸";
+
+p.style.left=Math.random()
+
+*100+"vw";
+
+p.style.animationDuration=
+(12+Math.random()*10)+"s";
+
+document.body.appendChild(p);
+
+}
+
+/* ---------- SPARKLES ---------- */
+
+for(let i=0;i<25;i++){
+
+let s=document.createElement
+
+("div");
+
+s.className="floating";
+
+s.innerHTML="✨";
+
+s.style.left=Math.random()
+
+*100+"vw";
+
+s.style.animationDuration=
+(8+Math.random()*8)+"s";
+
+document.body.appendChild(s);
+
+}
+
+/* ---------- MUSIC ---------- */
+
+const 
+
+music=document.getElementById
+
+("music");
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}
+else{
+
+music.pause();
+
+}
+
+}
+
+/* ---------- SCREEN NAVIGATION 
+
+---------- */
+
+function next(current){
+
+document
+.getElementById("s"+current)
+.classList.add("hidden");
+
+if(current===9){
+
+startCountdown();
+
+return;
+
+}
+
+document
+.getElementById("s"+(current+1))
+.classList.remove("hidden");
+
+}
+
+/* ---------- COUNTDOWN ---------- */
+
+function startCountdown(){
+
+document
+.getElementById("s10")
+.classList.remove("hidden");
+
+let count=3;
+
+let el=document.getElementById
+
+("countdown");
+
+let timer=setInterval(()=>{
+
+count--;
+
+el.innerHTML=count;
+
+if(count===0){
+
+clearInterval(timer);
+
+document
+.getElementById("s10")
+.classList.add("hidden");
+
+document
+.getElementById("s11")
+.classList.remove("hidden");
+
+openCurtains();
+function openCurtains(){
+
+const container =
+document.getElementById
+
+("curtain-container");
+
+container.style.visibility="visible"
+
+;
+
+document
+.getElementById("left-curtain")
+.classList.add("open-left");
+
+document
+.getElementById("right-curtain")
+.classList.add("open-right");
+
+}
+
+}
+
+},1000);
+
+}
+
+/* ---------- CONFETTI ---------- */
+
+function launchConfetti(){
+
+for(let i=0;i<180;i++){
+
+let c=document.createElement
+
+("div");
+
+c.style.position="fixed";
+
+c.style.left=Math.random()
+
+*100+"vw";
+
+c.style.top="-20px";
+
+c.style.width="10px";
+
+c.style.height="10px";
+
+c.style.borderRadius="50%";
+
+c.style.background=
+`hsl(${Math.random()*360},
+100%,70%)`;
+
+c.style.zIndex="999";
+
+c.style.transition="5s linear";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+
+c.style.transform=
+`translateY(120vh)
+rotate(720deg)`;
+
+},100);
+
+}
+
+}
+
+/* ---------- AUTO START MUSIC ON 
+
+FIRST CLICK ---------- */
+
+document.addEventListener(
+"click",
+function(){
+
+if(music.paused){
+
+music.play().catch(()=>{});
+
+}
+
+},
+{once:true}
+);
+
+</script>
+
+<div id="curtain-container">
+
+    <div id="left-curtain"></div>
+
+    <div id="right-curtain"></div>
+
+</div>
+
+</body>
+</html>
